@@ -9,11 +9,21 @@ body {
     background-color: #f4f4f4;
     padding: 20px;
 }
+.gridmaster {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+}
+
+.edge {
+    grid-row: span 3;
+}
+.middle {
+    grid-column: 2;
+}
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 7fr 1fr;
     padding: 10px 0;
     border-bottom: 2px solid #ccc;
 }
@@ -47,9 +57,11 @@ h1 {
     background-color: #00c4cc;
     color: white;
     border: none;
-    padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
+    width: 100px;
+    height: 40px;
+    margin: auto;
 }
 
 .login-btn:hover {
@@ -83,10 +95,14 @@ h1 {
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    
 }
 
 .tip:hover {
     background-color: #ccc;
+    transition: transform 0.3s; 
+    transform: scale(1.05);
 }
 
 .tip-icon {
